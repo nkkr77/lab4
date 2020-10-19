@@ -62,7 +62,9 @@ public class Circle
   		Circle c = new Circle(r);
 		
 		System.out.println("The circle's area is: " + c.getArea());
+                
 		System.out.println("The circle's diameter is: " + c.getDiameter());
+                
 		System.out.println("The circle's circumference is: " + c.getCircumference());
  
 		

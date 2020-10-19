@@ -1,5 +1,6 @@
 
 import static java.time.Clock.system;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,18 +17,25 @@ public class Car {
     
 	private int yearModel;
 	private String make;
-	private int speed;
+	private int speed = 0;
 	
 	public Car(int year, String mk){
 		yearModel = year;
 		make = mk;
-		speed = 0;
+		
 	}
-	
+        
 	public static void main(String[] args) {
-		Car hyncar = new Car(2010, "Honda");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Car Model: ");
+            int yr= sc.nextInt();
+            Scanner sc1 = new Scanner(System.in);
+            System.out.println("Enter Car Make: ");
+            String model= sc1.nextLine();
+            
+		Car hyncar = new Car(yr, model);
                 
-                System.out.println("Year model of the car: " + hyncar.getYearModel());
+                System.out.println("\nYear model of the car: " + hyncar.getYearModel());
                 System.out.println("Make of the car: " + hyncar.getMake());
                 System.out.println();
                 
